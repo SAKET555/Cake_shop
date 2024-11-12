@@ -14,22 +14,30 @@ body {
 
 /* Header Styling */
 header {
-  background-color: #ff69b4;
-  padding: 1rem;
+  background: linear-gradient(90deg, #e6b35a, #ffba2f);
+  padding: 1.5rem 0; /* Increased padding for taller header */
   color: #fff;
   text-align: center;
+  font-size: 1.5rem; /* Increased font size */
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+/* Header Navigation Links */
 header nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 20px; /* Adjusted margin for spacing between links */
   font-weight: bold;
+  font-size: 1.1rem; /* Increased font size for links */
 }
 
 header nav a:hover {
   text-decoration: underline;
 }
+
 
 /* Homepage Styling */
 h1 {
@@ -152,7 +160,7 @@ header {
 .homepage {
   background-size: cover;
   background-position: center;
-  padding: 20px;
+  padding: 100px;
   color: #fff;
 }
 

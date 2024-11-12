@@ -1,28 +1,43 @@
-// src/pages/CartPage.js
 import React, { useState } from 'react';
+import { useCart } from '../components/CartContext';
 
 const CartPage = () => {
-  const [cart, setCart] = useState([
-    { id: 1, title: 'Chocolate Cake', quantity: 1, price: 10 },
-    { id: 2, title: 'Fruit Cake', quantity: 2, price: 15 },
-  ]);
+  const { cart, removeFromCart } = useCart();
 
-  const handleRemove = (id) => {
-    setCart(cart.filter(item => item.id !== id));
+  const handleProceedToCheckout = () => {
+    alert('Proceeding to checkout...');
   };
 
   return (
     <div>
       <h1>Shopping Cart</h1>
       <ul>
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
         {cart.map(item => (
           <li key={item.id}>
-            {item.title} - Quantity: {item.quantity} - Price: ${item.price}
-            <button onClick={() => handleRemove(item.id)}>Remove</button>
+            {item.title} - Quantity: {item.quantity || 1} - Price: ${item.price}
+            <button onClick={() => removeFromCart(item.id)}>Remove</button>
           </li>
         ))}
       </ul>
-      <button>Proceed to Checkout</button>
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <button onClick={handleProceedToCheckout}>Proceed to Checkout</button>
+      </div>
     </div>
   );
 };

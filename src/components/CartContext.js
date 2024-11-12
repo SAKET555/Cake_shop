@@ -15,7 +15,10 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   // Function to add items to the cart
-  const addToCart = (item) => setCart([...cart, item]);
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+    alert(`${item.title} has been added to the cart.`);
+  };
 
   // Function to remove items from the cart by ID
   const removeFromCart = (id) => setCart(cart.filter((item) => item.id !== id));

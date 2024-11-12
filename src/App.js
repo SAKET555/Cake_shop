@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -9,6 +8,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { CartProvider } from './components/CartContext'; // Import the CartProvider
 import './App.css';
+import Contact from './components/Contact'; // Import the Contact component
+import About from './components/About'; // Import the About component
+import SocialMedia from './components/SocialMedia'; // Import the SocialMedia component
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
             <Route path="/categories" element={<Categories />} />
             <Route path="/cake/:id" element={<CakeDetails />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/social" element={<SocialMedia />} /> {/* Add the Social Media route */}
           </Routes>
           <Footer />
         </div>
@@ -30,3 +35,4 @@ function App() {
 }
 
 export default App;
+
